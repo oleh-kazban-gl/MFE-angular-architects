@@ -33,5 +33,6 @@
       "!{projectRoot}/karma.conf.js"
     ]
   },
-  "neverConnectToCloud": true
+  "neverConnectToCloud": true,
+  "analytics": false
 }
