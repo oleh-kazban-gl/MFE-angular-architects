@@ -1,18 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AuthLibService } from 'auth-lib';
 
 @Component({
   selector: 'lib-other',
   template: '<p>User: {{user}}</p>',
-  // styleUrls: ['./other.component.css']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OtherComponent implements OnInit {
+export class OtherComponent {
 
-  // user = 'A';
-  user = this.service.user;
-  constructor(private service: AuthLibService) { }
-
-  ngOnInit(): void {
-  }
+  private readonly service = inject(AuthLibService);
+  readonly user = this.service.user;
 
 }

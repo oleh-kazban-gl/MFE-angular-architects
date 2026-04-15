@@ -1,0 +1,15 @@
+.flights-search {
+    border: 2px dashed var(--errorColor);
+    padding: 20px;
+}
+
+.flights-search__input {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid var(--borderColor);
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

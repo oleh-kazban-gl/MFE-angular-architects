@@ -1,17 +1,17 @@
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 import { AuthLibService } from 'auth-lib';
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  imports: [RouterLink, RouterOutlet, NgOptimizedImage],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'shell';
-
-  constructor(private service: AuthLibService, http: HttpClient) {
-    this.service.login('Max', null);
+  constructor() {
+    inject(AuthLibService).login('Max', null);
   }
-
 }
 

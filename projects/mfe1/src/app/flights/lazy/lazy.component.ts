@@ -1,14 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-lazy',
-  templateUrl: './lazy.component.html'
+  templateUrl: './lazy.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LazyComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class LazyComponent { }

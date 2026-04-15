@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --borderColor: silver;
+  --textColor: #333;
+  --linkColor: #0066cc;
+  --tagColor: #eee;
+  --activeColor: #000;
+  --disabledColor: #ccc;
+  --errorColor: darkred;
+}
+

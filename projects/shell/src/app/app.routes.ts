@@ -24,9 +24,9 @@ export const APP_ROUTES: Routes = [
       loadRemoteModule({
         type: 'manifest',
         remoteName: 'mfe1',
-        exposedModule: './Module',
-      }).then((m) => m.FlightsModule),
-  },
+        exposedModule: './Routes',
+      }).then((m) => m.FLIGHTS_ROUTES),
+  },,
   {
     path: 'react',
     component: WebComponentWrapper,

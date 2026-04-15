@@ -1,21 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthLibService {
 
-  private userName: string;
+  private readonly _user = signal<string>('');
+  readonly user = this._user.asReadonly();
 
-  public get user(): string {
-    return this.userName;
-  }
-
-  constructor() { }
-
-  public login(userName: string, password: string): void {
+  public login(userName: string, password: string | null): void {
     // Authentication for **honest** users TM. (c) Manfred Steyer
-    this.userName = userName;
+    this._user.set(userName);
   }
 
 }

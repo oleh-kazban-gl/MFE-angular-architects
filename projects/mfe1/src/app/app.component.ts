@@ -1,13 +1,10 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: './app.component.html',
+  imports: [RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
-  
-  constructor(http: HttpClient) {
-    console.debug('http', http);
-  }
-}
+export class AppComponent { }
