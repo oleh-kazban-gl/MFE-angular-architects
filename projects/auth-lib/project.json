@@ -1,0 +1,35 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "auth-lib",
+  "projectType": "library",
+  "sourceRoot": "projects/auth-lib/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "projects/auth-lib/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/auth-lib/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/auth-lib/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": [
+        "{workspaceRoot}/dist/auth-lib"
+      ]
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "projects/auth-lib/src/test.ts",
+        "tsConfig": "projects/auth-lib/tsconfig.spec.json",
+        "karmaConfig": "projects/auth-lib/karma.conf.js"
+      }
+    }
+  }
+}
