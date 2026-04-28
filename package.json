@@ -14,7 +14,8 @@
     "test": "nx test",
     "lint": "nx lint",
     "e2e": "nx e2e",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "dep-graph": "nx dep-graph"
   },
   "private": true,
   "dependencies": {
